@@ -59,13 +59,10 @@ public class CustomOnOffButton extends FrameLayout{
                     getInteger(R.styleable.CustomOnOffButton_onTextColor, Color.parseColor(COLOR_ON_BUTTON_TEXT));
             onBgColor = attributeValuesArray. //on bg color
                     getInteger(R.styleable.CustomOnOffButton_onBgColor, Color.parseColor(COLOR_ON_BUTTON_BACKGROUND));
-
-
             offTextColor = attributeValuesArray. //off text color
                     getInteger(R.styleable.CustomOnOffButton_offTextColor, Color.parseColor(COLOR_OFF_BUTTON_TEXT));
             offBgColor = attributeValuesArray.
                     getInteger(R.styleable.CustomOnOffButton_offBgColor, Color.parseColor(COLOR_OFF_BUTTON_BACKGROUND));
-
             disTextColor = attributeValuesArray. //disable text color
                     getInteger(R.styleable.CustomOnOffButton_disTextColor, Color.parseColor(COLOR_DISABLE_BUTTON_TEXT));
             disBgColor = attributeValuesArray.
@@ -106,8 +103,6 @@ public class CustomOnOffButton extends FrameLayout{
     private void inflate(){
         inflate(getContext(), R.layout.custom_onoff_button_layout, this);
     }
-
-
 
     private void setButtonStyle(){
         if(isOn){

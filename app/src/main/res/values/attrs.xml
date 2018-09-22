@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomCircleButton">
+        <attr name="textSize" format="float"/>
+        <attr name="onText" format="string"/>
+        <attr name="offText" format="string"/>
+        <attr name="onTextColor" format="color"/>
+        <attr name="offTextColor" format="color"/>
+        <attr name="onBgColor" format="color"/>
+        <attr name="offBgColor" format="color"/>
+    </declare-styleable>
+</resources>

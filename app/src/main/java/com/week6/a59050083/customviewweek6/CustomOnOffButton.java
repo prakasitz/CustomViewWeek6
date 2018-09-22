@@ -7,8 +7,6 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.TypedValue;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -16,12 +14,12 @@ import android.widget.FrameLayout;
 public class CustomOnOffButton extends FrameLayout{
     private Button btnOn, btnOff;
     private boolean isOn = false;
-    private String onText;
-    private String offText;
     private int onTextColor;
-    private int offTextColor;
     private int onBgColor;
+    private int offTextColor;
     private int offBgColor;
+    private int disTextColor;
+    private int disBgColor;
     private final String COLOR_DISABLE_BUTTON_BACKGROUND = "#fffff9";
     private final String COLOR_DISABLE_BUTTON_TEXT = "#918c8c";
     private final String COLOR_ON_BUTTON_BACKGROUND = "#00ff00";
@@ -57,15 +55,21 @@ public class CustomOnOffButton extends FrameLayout{
         TypedArray attributeValuesArray = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.CustomOnOffButton,
                 defStyleAttr, defStyleRes);
         try{
-
-            onTextColor = attributeValuesArray.
+            onTextColor = attributeValuesArray. //on text color
                     getInteger(R.styleable.CustomOnOffButton_onTextColor, Color.parseColor(COLOR_ON_BUTTON_TEXT));
-            offTextColor = attributeValuesArray.
-                    getInteger(R.styleable.CustomOnOffButton_offTextColor, Color.parseColor(COLOR_OFF_BUTTON_TEXT));
-            onBgColor = attributeValuesArray.
+            onBgColor = attributeValuesArray. //on bg color
                     getInteger(R.styleable.CustomOnOffButton_onBgColor, Color.parseColor(COLOR_ON_BUTTON_BACKGROUND));
+
+
+            offTextColor = attributeValuesArray. //off text color
+                    getInteger(R.styleable.CustomOnOffButton_offTextColor, Color.parseColor(COLOR_OFF_BUTTON_TEXT));
             offBgColor = attributeValuesArray.
                     getInteger(R.styleable.CustomOnOffButton_offBgColor, Color.parseColor(COLOR_OFF_BUTTON_BACKGROUND));
+
+            disTextColor = attributeValuesArray. //disable text color
+                    getInteger(R.styleable.CustomOnOffButton_disTextColor, Color.parseColor(COLOR_DISABLE_BUTTON_TEXT));
+            disBgColor = attributeValuesArray.
+                    getInteger(R.styleable.CustomOnOffButton_disBgColor, Color.parseColor(COLOR_DISABLE_BUTTON_BACKGROUND));
         }finally{
             attributeValuesArray.recycle();
         }
@@ -109,13 +113,15 @@ public class CustomOnOffButton extends FrameLayout{
         if(isOn){
             btnOn.setTextColor(onTextColor);
             btnOn.setBackgroundColor(onBgColor);
+
+            btnOff.setTextColor(disTextColor);
+            btnOff.setBackgroundColor(disBgColor);
+        }else{
             btnOff.setTextColor(offTextColor);
             btnOff.setBackgroundColor(offBgColor);
-        }else{
-            btnOn.setTextColor(Color.parseColor(COLOR_DISABLE_BUTTON_TEXT));
-            btnOn.setBackgroundColor(Color.parseColor(COLOR_DISABLE_BUTTON_BACKGROUND));
-            btnOff.setTextColor(Color.parseColor(COLOR_OFF_BUTTON_TEXT));
-            btnOff.setBackgroundColor(Color.parseColor(COLOR_OFF_BUTTON_BACKGROUND));
+
+            btnOn.setTextColor(disTextColor);
+            btnOn.setBackgroundColor(disBgColor);
         }
     }
 

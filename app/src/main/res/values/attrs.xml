@@ -17,12 +17,15 @@
         <attr name="offBgColor" />
     </declare-styleable>
     <declare-styleable name="CustomOnOffButton">
-        <attr name="textSize1" />
-        <attr name="onText" />
-        <attr name="offText" />
-        <attr name="onTextColor" />
-        <attr name="offTextColor" />
-        <attr name="onBgColor" />
-        <attr name="offBgColor" />
+        <attr name="textSize1"/>
+        <attr name="onText"/>
+        <attr name="onTextColor"/>
+        <attr name="onBgColor"/>
+        <attr name="offText"/>
+        <attr name="offTextColor"/>
+        <attr name="offBgColor"/>
+        <attr name="disText" format="string"/>
+        <attr name="disTextColor" format="color"/>
+        <attr name="disBgColor" format="color"/>
     </declare-styleable>
 </resources>

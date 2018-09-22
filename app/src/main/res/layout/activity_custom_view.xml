@@ -45,10 +45,12 @@
             android:id="@+id/btCustomOnOff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:onTextColor="@color/colorPrimaryDark"
-            app:offTextColor="@color/colorAccent"
-            app:offBgColor="#1ff"
-            app:onBgColor="#ef1b1b"
+            app:onTextColor="#000000"
+            app:onBgColor="@color/bgSuccess"
+            app:offTextColor="#000000"
+            app:offBgColor="@color/colorAccent"
+            app:disTextColor="@color/textDisable"
+            app:disBgColor="@color/bgDisable"
             />
     </LinearLayout>
 </LinearLayout>

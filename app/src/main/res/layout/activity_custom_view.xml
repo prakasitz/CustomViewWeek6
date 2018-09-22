@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
         <TextView
             android:gravity="center_vertical|left"
             android:layout_marginLeft="20dp"
@@ -19,13 +20,35 @@
             android:textSize="20sp"
             android:text="Auto save"/>
         <com.week6.a59050083.customviewweek6.CustomCircleButton
-            android:id="@+id/sasdsa"
+            android:id="@+id/btCustomCircle"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            app:onText="open"
-            app:offText="close"
-            app:offBgColor="@color/colorPrimaryDark"
             app:onBgColor="@color/colorPrimary"
+            app:offBgColor="@color/colorAccent"
+            app:onText="123"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:gravity="center_vertical|left"
+            android:layout_marginLeft="20dp"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="Auto play"/>
+        <com.week6.a59050083.customviewweek6.CustomOnOffButton
+            android:id="@+id/btCustomOnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:onTextColor="@color/colorPrimaryDark"
+            app:offTextColor="@color/colorAccent"
+            app:offBgColor="#1ff"
+            app:onBgColor="#ef1b1b"
             />
     </LinearLayout>
 </LinearLayout>

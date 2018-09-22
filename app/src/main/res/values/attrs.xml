@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="textSize1" format="float"/>
+    <attr name="onText" format="string"/>
+    <attr name="offText" format="string"/>
+    <attr name="onTextColor" format="color"/>
+    <attr name="offTextColor" format="color"/>
+    <attr name="onBgColor" format="color"/>
+    <attr name="offBgColor" format="color"/>
     <declare-styleable name="CustomCircleButton">
-        <attr name="textSize" format="float"/>
-        <attr name="onText" format="string"/>
-        <attr name="offText" format="string"/>
-        <attr name="onTextColor" format="color"/>
-        <attr name="offTextColor" format="color"/>
-        <attr name="onBgColor" format="color"/>
-        <attr name="offBgColor" format="color"/>
+        <attr name="textSize1" />
+        <attr name="onText" />
+        <attr name="offText" />
+        <attr name="onTextColor" />
+        <attr name="offTextColor" />
+        <attr name="onBgColor" />
+        <attr name="offBgColor" />
+    </declare-styleable>
+    <declare-styleable name="CustomOnOffButton">
+        <attr name="textSize1" />
+        <attr name="onText" />
+        <attr name="offText" />
+        <attr name="onTextColor" />
+        <attr name="offTextColor" />
+        <attr name="onBgColor" />
+        <attr name="offBgColor" />
     </declare-styleable>
 </resources>

@@ -51,7 +51,7 @@ public class CustomCircleButton extends View{
                 defStyleAttr, defStyleRes);
         try{
             textSizeSP = attributeValuesArray.
-                    getFloat(R.styleable.CustomCircleButton_textSize, DEFAULT_TEXT_SIZE_SP);
+                    getFloat(R.styleable.CustomCircleButton_textSize1, DEFAULT_TEXT_SIZE_SP);
             textSizePX = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, textSizeSP,
                     getResources().getDisplayMetrics());
             onText = attributeValuesArray.
